@@ -1,0 +1,62 @@
+<div class="bg-image" style="
+  background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80');
+  height: 100vh;
+">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bg-transparent">
+    <a class="navbar-brand" style="margin:0px 1200px 0px 30px;" routerLink="/home"><span
+        style="color:orange;">D</span>o<span style="color:orange;">C</span>onnect</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " href="/login" style="margin: 0px 0px 0px -90px">LOGIN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">SIGNUP</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <br />
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+
+        <div class="card-body row no-gutters align-items-center">
+          <div class="col-auto">
+            <i class="fas fa-search h4 text-body"></i>
+          </div>
+
+          <div class="col">
+            <input class="form-control form-control-lg form-control-borderless" type="search"
+              placeholder="Search topics or keywords" [(ngModel)]="searchString">
+          </div>&nbsp;&nbsp;
+
+          <div class="col-auto">
+            <button class="btn btn-lg btn-primary"  (click)="submit()">Search</button>
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <div class="hi">
+        <h1 class="p-ff-roboto-slab fs-display1" data-v-5d3bd730 style="margin-top:3%">
+          " Let empower the world to develop technology through collective knowledge..."
+        </h1>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <button type="submit" class="btn btn-primary btn-lg" style="margin-top:10%;"><b>let get started :)</b></button>
+      </a>
+    </div>
+
+  </div>
+</div>

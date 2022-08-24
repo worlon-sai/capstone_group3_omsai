@@ -1,0 +1,29 @@
+<app-admin-header></app-admin-header>
+
+<br><br>
+
+<h3 class="text-center"> Welcome Back!! {{username}}</h3>
+<br>
+<h4 class="text-center">You Can Perform The Following Operations...</h4>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+
+            <a class="btn btn-success btn-block" routerLink="/approveQuestion">Approve Questions</a><br><br><br>
+            <a class="btn btn-success btn-block" routerLink="/approveAnswer">Approve Answers</a><br><br><br>
+              <a class="btn btn-info btn-block" routerLink="/getAllUsers">getAllUsers</a><br><br><br>
+
+
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-danger btn-block" routerLink="/deleteQuestion">Delete Questions</a><br><br><br>
+            <a class="btn btn-danger btn-block" routerLink="/deleteAnswer">Delete Answers</a><br><br><br>
+            <a class="btn btn-info btn-block" routerLink="/adminsignup">Add Admin</a><br><br><br>
+        </div>
+
+    </div>

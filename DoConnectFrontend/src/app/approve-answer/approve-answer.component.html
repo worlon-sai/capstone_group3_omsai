@@ -1,0 +1,52 @@
+<app-admin-header></app-admin-header>
+
+<br>
+<div class="container">
+    <div class="card">
+        <h3 class="list-group-item list-group-item-action active">Approval is pending for following Answers</h3>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action">
+                <div *ngFor="let question of questions">
+                    <div *ngFor="let answer of answers">
+                        <div *ngIf="question.q_id===answer.q_id">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h4>Topic: {{ question.title }}</h4>
+                                    <p>Asked by: {{ question.username }}</p>
+                                    <h4>Question: {{ question.question }}</h4>
+
+                                    <h5>Answer: </h5>
+                                    <h6> {{answer.answer}}</h6>
+                                    <p>Answered By: {{answer.username}}</p>
+                                    <div *ngIf="answer.returnedImage!=null">
+                                        <img style=" border-radius: 15px;" width="100%" [src]="answer.returnedImage" />
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+
+
+                                    <button class="btn btn-success" (click)="approve(answer?.a_id)">
+                                        Approve Answer
+                                    </button>
+                                    <button class="btn btn-danger"  (click)="df(answer?.a_id)">
+                                      Reject answer
+                                  </button>
+                                  <div *ngIf="a==answer?.a_id">
+                                  <input type="text" value="remark" id="remark"  name="remark"placeholder=" ">
+                                  <button class="btn btn-danger" (click)="delete(answer?.a_id)">
+                                      conform
+                                  </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+</div>

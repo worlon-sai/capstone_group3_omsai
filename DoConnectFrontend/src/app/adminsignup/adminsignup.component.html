@@ -1,0 +1,85 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" style="margin:0px 1200px 0px 0px;" routerLink="/login">DoConnect</a>
+  <div class="navbar navbar-light" style="background-color: #e3f2fd;" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/login">Log In <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br />
+<section class="vh-50">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <br />
+          <h3>Admin Registration Form</h3>
+          <br />
+
+          <div class="form-group">
+            <label for="username">Admin Name </label><br />
+            <input type="text" class="form-control" formControlName="username" placeholder="Enter your Admin Name"
+              id="username" name="username" />
+            <span class="text-danger" *ngIf="
+                  signupForm.get('username').touched &&
+                  signupForm.get('username').invalid
+                ">
+                Admin Name is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Admin Email ID </label><br />
+            <input type="text" class="form-control" formControlName="email" placeholder="Enter your Admin email" id="email"
+              name="email" />
+            <span class="text-danger" *ngIf="
+                  signupForm.get('email').touched &&
+                  signupForm.get('email').invalid
+                ">
+               Email is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="password">Admin Password </label><br />
+            <input type="password" class="form-control" formControlName="password" id="password"
+              placeholder="Enter your Admin password" name="password" />
+            <span class="text-danger" *ngIf="
+                  signupForm.get('password').touched &&
+                  signupForm.get('password').invalid
+                ">
+              Password is required
+            </span>
+          </div>
+
+
+          <!-- <div class="form-group">
+            <label for="role">Role</label><br />
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" value="admin" id="admin" formControlName="role" />
+              <label class="form-check-label" for="admin">Admin</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" value="user" id="user" formControlName="role" />
+              <label class="form-check-label" for="user">User</label>
+            </div>
+          </div> -->
+
+          <p>
+            <button class="btn btn-primary" type="submit">Register Now</button>
+          </p>
+          <p>
+            <a routerLink="/adminDashboard">Redirect to dashboard...</a><br />
+          </p>
+        </form>
+      </div>
+    </div>
+    <br />
+  </div>
+  <br />

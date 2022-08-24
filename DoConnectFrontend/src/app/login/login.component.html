@@ -1,0 +1,60 @@
+<nav class="navbar navbar-light " style="background-color: #e3f2fd;">
+  <a class="navbar-brand" style="margin:0px 1200px 0px 30px;" routerLink="/signup">DoConnect</a>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqO1mi8fSr6je71tNMSqjdb4PJqXBO2wtCdQ&usqp=CAU"
+    width="30" height="30" alt="" style="margin:0px 0px 0px -2725px;">
+  <div class="navbar navbar-light" style="background-color: #e3f2fd;" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/signup" style="margin:1px 1px px 30px;">Sign Up <span
+            class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br /><br /><br /><br />
+<section class="vh-50">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <br />
+          <h3>LogIn Form</h3>
+          <br />
+          <div class="form-group">
+            <label for="username">Username </label><br />
+            <input type="text" placeholder="Enter Your Username" class="form-control" formControlName="username"
+              id="username" name="username" />
+            <span class="text-danger" *ngIf="
+                  loginForm.get('username').touched &&
+                  loginForm.get('username').invalid
+                ">
+              Username is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password </label><br />
+            <input type="password" class="form-control" placeholder="Enter Your Password" formControlName="password"
+              id="password" name="password" />
+            <span class="text-danger" *ngIf="
+                  loginForm.get('password').touched &&
+                  loginForm.get('password').invalid
+                ">
+              Password is required
+            </span>
+          </div>
+          <p>
+            <button class="btn btn-primary" style="margin:0px  50px;" type="submit">
+              LOGIN
+            </button>
+          </p>
+          <p>
+            <a routerLink="/signup">New User? Click here to Register</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>

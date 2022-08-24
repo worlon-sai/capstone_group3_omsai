@@ -1,0 +1,36 @@
+<app-header></app-header>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card" style="background-color:ghostwhite;">
+                <div class="d-flex justify-content-around">
+                    <form [formGroup]="addQuestionForm" (ngSubmit)="addQuestion()">
+                        <br />
+                        <h3>Ask your Question Here</h3>
+                        <br />
+                        <div class="form-group">
+                            <label for="title">Topic</label><br />
+                            <input type="text" placeholder="Topic" class="form-control" formControlName="title"
+                                id="title" name="title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="question">Question </label><br />
+
+                                <textarea rows="4" cols="40" placeholder="Enter Your Question"
+                                formControlName="question" id="question" name="question">
+                                Enter Your question
+                               </textarea>
+                        </div>
+                        <p>
+                            <button class="btn btn-primary" type="submit">
+                                Submit
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="card" style="background-color:ghostwhite;">
+                <div class="d-flex justify-content-around">
+                    <form [formGroup]="addAnswerForm" (ngSubmit)="addAnswer()">
+                        <br />
+                        <h3>Add your Answer Here</h3>
+                        <br />
+
+                        <div class="form-group">
+                            <label for="answer">
+                                <h5 style="color:gray;">Answer</h5>
+                            </label><br />
+
+                                <textarea  class="form-control"
+                                formControlName="answer" id="answer" name="answer">
+                                Enter Your Answer
+                               </textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="image">
+                                <h5 style="color:gray;">Image </h5>
+                                <!-- <h6 style="color:red;">(*This field is mandatory) </h6> -->
+                            </label><br />
+                            <input type="file" class="form-control" (change)="onFileChanged($event)" id="image"
+                                name="image" />
+
+                        </div>
+
+                        <p>
+                            <button class="btn btn-primary" type="submit">
+                                Submit
+                            </button>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
