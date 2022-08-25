@@ -37,7 +37,7 @@ export class DashboardquestionsComponent implements OnInit {
   getData() {
     console.log("work");
     this.api.getApprovedQuestions().subscribe((res) => {
-      // console.log(res);
+
       this.questions = res;
     });
   }
@@ -66,7 +66,7 @@ chat()
 
             this.questions=this.question;
             for (let j = 0; j < res[i].answerDtos.length; j++) {
-              // console.log(res[i].answerDtos[j]);
+
               if (res[i].answerDtos[j].returnedImage != null) {
                 res[i].answerDtos[j].returnedImage = this.convertImage(
                   res[i].answerDtos[j].returnedImage

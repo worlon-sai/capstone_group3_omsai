@@ -44,7 +44,7 @@ export class ApproveAnswerComponent implements OnInit {
           }
 
         }
-        // console.log(this.questions);
+
 
 
       }, (err) => {

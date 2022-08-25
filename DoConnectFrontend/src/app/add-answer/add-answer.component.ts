@@ -28,7 +28,6 @@ export class AddAnswerComponent implements OnInit {
     });
     this.qid = this.api.getQid();
     this.username = this.api.getUserName();
-    console.log(this.username);
     if (this.username === undefined) {
       alert("Login is required");
       this.router.navigate(["/login"]);
@@ -40,7 +39,7 @@ export class AddAnswerComponent implements OnInit {
   }
   addAnswer() {
     const requestBody: FormData = new FormData();
-    console.log(this.qid)
+
     requestBody.append("answer", this.addAnswerForm?.value.answer);
     requestBody.append("username", this.username);
    if(this.selectedImg != null)

@@ -41,7 +41,7 @@ export class DashboardComponent implements OnInit {
   getData() {
     console.log("work");
     this.api.getApprovedQuestions().subscribe((res) => {
-      // console.log(res);
+
       this.questions = res;
     });
   }

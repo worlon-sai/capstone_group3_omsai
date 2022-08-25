@@ -35,7 +35,7 @@ export class AdminsignupComponent implements OnInit {
         .post<any>("http://localhost:9090/users/signUp", signUpRequestBody)
         .subscribe(
           (res) => {
-            console.log(res);
+
 
             alert("Sign Up Is Done Succesfully");
             this.signupForm?.reset();

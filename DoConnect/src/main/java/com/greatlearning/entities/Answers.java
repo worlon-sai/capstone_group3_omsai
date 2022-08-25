@@ -30,7 +30,7 @@ public class Answers {
     private User user;
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY,optional = false)
-//    @OnDelete(action = OnDeleteAction.CASCADE)
+    //@OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "qid")
     private Questions questions;
 
